@@ -1,0 +1,1342 @@
+/* ==========================================================
+   국가공무원인재개발원 (강력한 보수 정권 스타일)
+   - 색채: 대한민국 정부 대표 딥 네이비(#071b30), 태극 레드(#dc2626), 결단 골드(#d97706)
+   - 특징: 결단력 있는 레이아웃, 어퍼컷 & 초상화 쇼케이스, 역동적 배지
+========================================================== */
+
+:root {
+  --gov-navy: #071b30;
+  --gov-blue: #1e40af;
+  --gov-red: #dc2626;
+  --gov-gold: #d97706;
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+  --bg-white: #ffffff;
+  --bg-light: #f8fafc;
+  --bg-gray: #f1f5f9;
+  --border-color: #cbd5e1;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 6px 16px rgba(7, 27, 48, 0.1);
+  --shadow-lg: 0 16px 36px rgba(7, 27, 48, 0.16);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+  --transition: all 0.22s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body.conservative-theme {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================================
+   최상단 정부 슬로건 바
+========================================================== */
+.gov-top-bar {
+  background-color: #04101e;
+  color: #e2e8f0;
+  font-size: 0.84rem;
+  border-bottom: 2px solid var(--gov-red);
+  padding: 8px 0;
+}
+
+.top-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gov-identity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flag-icon {
+  font-size: 1.15rem;
+}
+
+.quick-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.krds-badge {
+  background: rgba(220, 38, 38, 0.25);
+  color: #fca5a5;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  border: 1px solid rgba(220, 38, 38, 0.4);
+}
+
+.quick-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.quick-links .divider {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+#font-size-btn {
+  color: #93c5fd;
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+#font-size-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+/* ==========================================================
+   메인 헤더 & 네비게이션
+========================================================== */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 84px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-emblem {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, var(--gov-navy), var(--gov-red));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-slogan-tiny {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--gov-red);
+  letter-spacing: -0.2px;
+}
+
+.kr-title {
+  font-size: 1.28rem;
+  font-weight: 900;
+  color: var(--gov-navy);
+  letter-spacing: -0.6px;
+}
+
+.en-title {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  padding: 8px 2px;
+  transition: var(--transition);
+}
+
+.nav-link:hover, .nav-link.highlight-nav {
+  color: var(--gov-red);
+}
+
+.btn-primary-sm {
+  background-color: var(--gov-navy);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+.btn-primary-sm:hover {
+  background-color: var(--gov-red);
+  transform: translateY(-2px);
+}
+
+.mobile-toggle {
+  display: none;
+  font-size: 1.4rem;
+  color: var(--gov-navy);
+}
+
+/* ==========================================================
+   보수 정권 스타일 히어로 (좌측 텍스트 + 우측 어퍼컷 쇼케이스)
+========================================================== */
+.hero-section {
+  position: relative;
+  padding: 80px 0 60px;
+  background: radial-gradient(circle at 60% 30%, #112d4e 0%, var(--gov-navy) 70%);
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.07) 1.5px, transparent 1.5px),
+    linear-gradient(to right, rgba(220, 38, 38, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px, 80px 80px;
+}
+
+.hero-grid-layout {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.gov-vision-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.badge-point {
+  background-color: var(--gov-red);
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: 900;
+  line-height: 1.25;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.hero-title .text-accent {
+  background: linear-gradient(90deg, #f87171, #fde047, #93c5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+  font-size: 1.12rem;
+  color: #cbd5e1;
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
+.hero-desc strong {
+  color: #fff;
+  border-bottom: 2px solid var(--gov-red);
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  padding: 14px 28px;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--gov-red);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+}
+
+.btn-primary:hover {
+  background: #b91c1c;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: var(--gov-navy);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* 우측 대통령 & 어퍼컷 비주얼 카드 */
+.leader-showcase-card {
+  position: relative;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.photo-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  background: #000;
+  height: 440px;
+}
+
+.president-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: contrast(1.08) brightness(1.02);
+  transition: transform 0.4s ease;
+}
+
+.photo-wrapper:hover .president-img {
+  transform: scale(1.03);
+}
+
+.photo-gradient-tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(7, 27, 48, 0.95) 0%, rgba(7, 27, 48, 0.6) 60%, transparent 100%);
+  padding: 24px 20px 18px;
+}
+
+.tag-title {
+  display: block;
+  font-size: 0.8rem;
+  color: #fca5a5;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.tag-quote {
+  display: block;
+  font-size: 1.05rem;
+  color: #fff;
+  font-weight: 800;
+  margin-top: 2px;
+}
+
+/* 승리의 어퍼컷 다이내믹 뱃지 오버레이 */
+.uppercut-badge-overlay {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  color: #fff;
+  border: 3px solid #ffffff;
+  border-radius: 20px;
+  padding: 12px 18px;
+  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: badgeBounce 2.5s infinite ease-in-out;
+  z-index: 10;
+}
+
+@keyframes badgeBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.fist-icon {
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  color: var(--gov-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.fist-text .mini-korea {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 900;
+  color: #fef08a;
+  letter-spacing: 1px;
+}
+
+.fist-text strong {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+.fist-text small {
+  display: block;
+  font-size: 0.72rem;
+  color: #fee2e2;
+}
+
+/* 4대 공무원 인재상 퀵 스트립 */
+.talents-preview-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+}
+
+.talent-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.t-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.t-badge.blue { background: #2563eb; }
+.t-badge.red { background: var(--gov-red); }
+.t-badge.gold { background: var(--gov-gold); }
+.t-badge.navy { background: #0f172a; border: 1px solid #475569; }
+
+.t-text strong {
+  display: block;
+  font-size: 0.96rem;
+  color: #fff;
+}
+
+.t-text small {
+  font-size: 0.76rem;
+  color: #94a3b8;
+}
+
+/* ==========================================================
+   공통 섹션 타이틀
+========================================================== */
+.section {
+  padding: 85px 0;
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.section-header {
+  margin-bottom: 50px;
+}
+
+.section-header.text-center {
+  text-align: center;
+}
+
+.sub-heading {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--gov-red);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.main-heading {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: var(--gov-navy);
+  margin-bottom: 14px;
+}
+
+.title-underline {
+  width: 54px;
+  height: 4px;
+  background: var(--gov-red);
+  margin: 0 auto 16px;
+  border-radius: 2px;
+}
+
+.section-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ==========================================================
+   인재상 그리드
+========================================================== */
+.talents-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.talent-card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 30px 22px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.talent-card.highlight-border {
+  border: 2px solid var(--gov-red);
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.15);
+}
+
+.talent-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-top-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.blue-grad { background: linear-gradient(135deg, #2563eb, #1e40af); }
+.red-grad { background: linear-gradient(135deg, #ef4444, #b91c1c); }
+.amber-grad { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.navy-grad { background: linear-gradient(135deg, #1e293b, #0f172a); }
+
+.card-seq {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.text-red {
+  color: var(--gov-red) !important;
+}
+
+.talent-card h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--gov-navy);
+  margin-bottom: 10px;
+}
+
+.card-summary {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--gov-blue);
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.talent-sub-points {
+  margin-top: auto;
+  border-top: 1px solid var(--border-color);
+  padding-top: 14px;
+}
+
+.talent-sub-points li {
+  font-size: 0.84rem;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.45;
+}
+
+.talent-sub-points li i {
+  color: var(--gov-red);
+  font-size: 0.8rem;
+  margin-top: 3px;
+}
+
+/* ==========================================================
+   주요 업무 그리드
+========================================================== */
+.duty-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 38px;
+  flex-wrap: wrap;
+}
+
+.duty-tab {
+  padding: 10px 22px;
+  border-radius: 30px;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.duty-tab:hover {
+  border-color: var(--gov-red);
+  color: var(--gov-red);
+}
+
+.duty-tab.active {
+  background-color: var(--gov-navy);
+  color: #fff;
+  border-color: var(--gov-navy);
+  box-shadow: 0 4px 10px rgba(7, 27, 48, 0.25);
+}
+
+.duties-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.duty-card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.duty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gov-red);
+}
+
+.duty-icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.bg-navy { background: linear-gradient(135deg, #1e3a8a, #0f172a); }
+.bg-red { background: linear-gradient(135deg, #ef4444, #b91c1c); }
+.bg-blue { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
+.bg-teal { background: linear-gradient(135deg, #0d9488, #0f766e); }
+.bg-purple { background: linear-gradient(135deg, #7c3aed, #5b21b6); }
+.bg-gold { background: linear-gradient(135deg, #d97706, #b45309); }
+
+.duty-tag {
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: var(--gov-red);
+  background: #fee2e2;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.duty-content h3 {
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: var(--gov-navy);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.duty-content p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.duty-features li {
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.duty-features li i {
+  color: var(--gov-red);
+  font-size: 0.8rem;
+}
+
+/* ==========================================================
+   찾아오시는 길 상세 (Directions)
+========================================================== */
+.section-directions {
+  background-color: #f8fafc;
+}
+
+.campus-tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+.campus-tab-btn {
+  padding: 14px 28px;
+  background-color: #fff;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition);
+}
+
+.campus-tab-btn:hover {
+  border-color: var(--gov-red);
+  color: var(--gov-navy);
+}
+
+.campus-tab-btn.active {
+  background-color: var(--gov-navy);
+  color: #fff;
+  border-color: var(--gov-navy);
+  box-shadow: var(--shadow-md);
+}
+
+.badge-tag {
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.campus-tab-btn.active .badge-tag {
+  background-color: var(--gov-red);
+  color: #fff;
+}
+
+.campus-panel {
+  display: none;
+  animation: fadeIn 0.35s ease-in-out;
+}
+
+.campus-panel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.campus-header-card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.flag-pill {
+  font-size: 0.75rem;
+  font-weight: 800;
+  background-color: #fee2e2;
+  color: var(--gov-red);
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.pill-green {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.campus-title-wrap h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--gov-navy);
+  margin-bottom: 6px;
+}
+
+.address-text {
+  font-size: 0.98rem;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.address-text i {
+  color: var(--gov-red);
+  margin-right: 4px;
+}
+
+.contact-chips {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding: 10px 16px;
+  background-color: var(--bg-gray);
+  border: 1px solid var(--border-color);
+  border-radius: 25px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chip:hover {
+  background-color: #fee2e2;
+  color: var(--gov-red);
+  border-color: #fca5a5;
+}
+
+.campus-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.map-interactive-box {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.map-visual-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.map-pin-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--gov-navy);
+}
+
+.status-live {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--gov-red);
+  display: inline-block;
+  animation: pulse 1.8s infinite;
+}
+
+.green-dot {
+  background-color: #10b981;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.4); opacity: 0.3; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.map-render-mock {
+  position: relative;
+  height: 320px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 18px;
+  border: 1px solid #cbd5e1;
+}
+
+.map-backdrop {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jincheon-bg {
+  background: linear-gradient(135deg, #e0f2fe 0%, #fee2e2 100%);
+  background-size: 20px 20px;
+}
+
+.gwacheon-bg {
+  background: linear-gradient(135deg, #dcfce7 0%, #e0f2fe 100%);
+}
+
+.pin-marker {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.pin-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+  height: 110px;
+  background: rgba(220, 38, 38, 0.2);
+  border-radius: 50%;
+  animation: radar 2s infinite;
+}
+
+.green-pulse {
+  background: rgba(16, 185, 129, 0.25);
+}
+
+@keyframes radar {
+  0% { transform: translate(-50%, -50%) scale(0.6); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(1.6); opacity: 0; }
+}
+
+.pin-card {
+  position: relative;
+  background: var(--gov-navy);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  border: 2px solid #fff;
+}
+
+.surround-landmark {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  border: 1px solid #cbd5e1;
+  box-shadow: var(--shadow-sm);
+}
+
+.bus-stop { bottom: 20px; left: 20px; }
+.park-area { top: 25px; right: 25px; }
+.sub-stop { bottom: 25px; right: 25px; }
+.mt-area { top: 20px; left: 25px; }
+
+.map-app-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.btn-map {
+  flex: 1;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.btn-map.naver {
+  background-color: #03c75a;
+  color: #fff;
+}
+
+.btn-map.naver:hover {
+  background-color: #02b351;
+}
+
+.btn-map.kakao {
+  background-color: #fee500;
+  color: #191919;
+}
+
+.btn-map.kakao:hover {
+  background-color: #fada0a;
+}
+
+.btn-map.copy-addr {
+  background-color: var(--bg-gray);
+  color: var(--text-dark);
+  border: 1px solid var(--border-color);
+}
+
+.btn-map.copy-addr:hover {
+  background-color: #e2e8f0;
+}
+
+.transport-detail-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.box-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--gov-navy);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.transport-card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: 16px;
+}
+
+.trans-icon {
+  width: 44px;
+  height: 44px;
+  background-color: #fee2e2;
+  color: var(--gov-red);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.trans-info {
+  flex: 1;
+}
+
+.trans-info h5 {
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: var(--gov-navy);
+  margin-bottom: 4px;
+}
+
+.trans-info > p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.trans-info ul li {
+  font-size: 0.84rem;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 12px;
+}
+
+.trans-info ul li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  color: var(--gov-red);
+}
+
+.text-primary { color: var(--gov-blue); }
+.text-danger { color: var(--gov-red); }
+
+/* ==========================================================
+   푸터 (Footer)
+========================================================== */
+.main-footer {
+  background-color: #04101e;
+  color: #94a3b8;
+  padding: 60px 0 35px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo i {
+  font-size: 1.6rem;
+  color: var(--gov-red);
+}
+
+.f-title {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.f-sub {
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 20px;
+  font-size: 0.9rem;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+}
+
+.footer-addresses {
+  font-size: 0.86rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.addr-block strong {
+  color: #e2e8f0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.totop-btn {
+  cursor: pointer;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  color: #cbd5e1;
+  transition: var(--transition);
+}
+
+.totop-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background-color: var(--gov-navy);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  border: 1px solid var(--gov-red);
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .hero-grid-layout { grid-template-columns: 1fr; text-align: center; }
+  .hero-cta-group { justify-content: center; }
+  .talents-detail-grid { grid-template-columns: repeat(2, 1fr); }
+  .talents-preview-bar { grid-template-columns: repeat(2, 1fr); }
+  .duties-grid { grid-template-columns: repeat(2, 1fr); }
+  .campus-body-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .top-bar-inner { flex-direction: column; align-items: flex-start; }
+  .header-container { height: 70px; }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+    padding: 20px;
+  }
+  .nav-menu.active { display: block; }
+  .nav-list { flex-direction: column; align-items: flex-start; gap: 15px; }
+  .mobile-toggle { display: block; }
+  .btn-primary-sm { display: none; }
+  .hero-title { font-size: 2.1rem; }
+  .hero-desc { font-size: 1rem; }
+  .talents-detail-grid { grid-template-columns: 1fr; }
+  .talents-preview-bar { grid-template-columns: 1fr; }
+  .duties-grid { grid-template-columns: 1fr; }
+  .campus-tabs-container { flex-direction: column; }
+}

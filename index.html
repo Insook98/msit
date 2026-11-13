@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>국가공무원인재개발원 - 다시 도약하는 대한민국, 함께 잘 사는 국민의 나라</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="conservative-theme">
+
+  <!-- 태극 상징 최상단 국정 슬로건 바 -->
+  <aside class="gov-top-bar" aria-label="대한민국 정부 공식 배너">
+    <div class="container top-bar-inner">
+      <div class="gov-identity">
+        <span class="flag-icon">🇰🇷</span>
+        <span><strong>다시 도약하는 대한민국, 함께 잘 사는 국민의 나라</strong> | 인사혁신처 소속기관</span>
+      </div>
+      <div class="quick-links">
+        <span class="krds-badge"><i class="fa-solid fa-scale-balanced"></i> 자유 · 공정 · 상식</span>
+        <span class="divider">|</span>
+        <a href="https://www.mpm.go.kr" target="_blank" rel="noopener noreferrer">인사혁신처</a>
+        <span class="divider">|</span>
+        <a href="http://e-learning.nhi.go.kr" target="_blank" rel="noopener noreferrer">나라배움터</a>
+        <span class="divider">|</span>
+        <button id="font-size-btn"><i class="fa-solid fa-text-height"></i> 글자크기</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 메인 헤더 -->
+  <header class="main-header" id="navbar">
+    <div class="container header-container">
+      <a href="#home" class="brand-logo" aria-label="국가공무원인재개발원 홈">
+        <div class="logo-emblem">
+          <i class="fa-solid fa-landmark"></i>
+        </div>
+        <div class="logo-text">
+          <div class="top-slogan-tiny">다시 대한민국! 국가 혁신의 심장</div>
+          <span class="kr-title">국가공무원인재개발원</span>
+          <span class="en-title">National Human Resources Development Institute</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#vision" class="nav-link">4대 인재상</a></li>
+          <li><a href="#duties" class="nav-link">핵심 국정업무</a></li>
+          <li><a href="#curriculum" class="nav-link">정예 교육체계</a></li>
+          <li><a href="#directions" class="nav-link highlight-nav"><i class="fa-solid fa-map-location-dot"></i> 찾아오시는 길</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#directions" class="btn-primary-sm"><i class="fa-solid fa-route"></i> 캠퍼스 오시는 길</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="메뉴 열기">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 강력한 보수 정권 비주얼 히어로 섹션 (어퍼컷 세레머니 & 공식 초상화 연계) -->
+  <section id="home" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container hero-grid-layout">
+      <!-- 좌측: 강력한 국정 철학 텍스트 -->
+      <div class="hero-text-col">
+        <div class="gov-vision-badge">
+          <span class="badge-point">강력한 개혁 드라이브</span>
+          <span>자유민주주의 헌법가치 · 킬러규제 철폐 · 적극행정</span>
+        </div>
+
+        <h1 class="hero-title">
+          “결정했으면 결단력 있게!”<br>
+          <span class="text-accent">다시 도약하는 대한민국,</span><br>
+          당당하고 유능한 공직인재
+        </h1>
+
+        <p class="hero-desc">
+          국가공무원인재개발원은 <strong>확고한 국가관과 헌법 정신</strong>, 
+          탁월한 <strong>직무 전문성</strong>을 확립하여,<br>
+          탁상행정을 과감히 타파하고 국민을 위해 책임감 있게 일하는 정예 관료를 육성합니다.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#duties" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> 규제혁파·핵심업무 보기</a>
+          <a href="#directions" class="btn btn-outline"><i class="fa-solid fa-location-dot"></i> 진천 본원 · 과천 분원 안내</a>
+        </div>
+      </div>
+
+      <!-- 우측: 대통령 비주얼 & 역동적 어퍼컷 그래픽 카드 -->
+      <div class="hero-visual-col">
+        <div class="leader-showcase-card">
+          <!-- 공식 초상 사진 및 국정 프레임 -->
+          <div class="photo-wrapper">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/South_Korea_President_Yoon_Suk_Yeol_portrait_%28crop%29.jpg/640px-South_Korea_President_Yoon_Suk_Yeol_portrait_%28crop%29.jpg" 
+                 alt="대한민국 대통령 공식 초상" class="president-img" onerror="this.src='https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=600&q=80'">
+            <div class="photo-gradient-tag">
+              <span class="tag-title">제20대 대한민국 대통령</span>
+              <strong class="tag-quote">“국민만 바라보고 흔들림 없이 전진합니다”</strong>
+            </div>
+          </div>
+
+          <!-- 승리의 어퍼컷 다이내믹 배지 -->
+          <div class="uppercut-badge-overlay">
+            <div class="fist-icon"><i class="fa-solid fa-hand-fist"></i></div>
+            <div class="fist-text">
+              <span class="mini-korea">KOREA AGAIN</span>
+              <strong>도약의 어퍼컷!</strong>
+              <small>규제혁파 · 불법타파</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 하단 4대 공무원 인재상 퀵 스트립 -->
+    <div class="container">
+      <div class="talents-preview-bar">
+        <div class="talent-item">
+          <div class="t-badge blue">01</div>
+          <div class="t-text"><strong>소통 · 공감</strong><small>국민 중심 현장소통</small></div>
+        </div>
+        <div class="talent-item">
+          <div class="t-badge red">02</div>
+          <div class="t-text"><strong>헌신 · 열정</strong><small>자유민주주의 헌법 헌신</small></div>
+        </div>
+        <div class="talent-item">
+          <div class="t-badge gold">03</div>
+          <div class="t-text"><strong>창의 · 혁신</strong><small>킬러규제 철폐·돌파력</small></div>
+        </div>
+        <div class="talent-item">
+          <div class="t-badge navy">04</div>
+          <div class="t-text"><strong>윤리 · 책임</strong><small>무관용 청렴·공정과 상식</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4대 공무원 인재상 상세 -->
+  <section id="vision" class="section section-vision">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-heading">THE NEW ELITE CIVIL SERVANT</span>
+        <h2 class="main-heading">공직사회 혁신을 이끄는 ‘4대 공무원 인재상’</h2>
+        <div class="title-underline"></div>
+        <p class="section-desc">
+          대한민국 공직사회의 경쟁력을 세계 최고 수준으로 끌어올리기 위해<br>
+          채용·교육·평가·보직의 확고한 나침반이 되는 4대 행동 기준입니다.
+        </p>
+      </div>
+
+      <div class="talents-detail-grid">
+        <div class="talent-card">
+          <div class="card-top-icon blue-grad"><i class="fa-solid fa-comments"></i></div>
+          <span class="card-seq">ACTION 01</span>
+          <h3>소통 · 공감</h3>
+          <p class="card-summary">“국민 눈높이에서 경청하고 부처 칸막이를 부수는 공무원”</p>
+          <ul class="talent-sub-points">
+            <li><i class="fa-solid fa-check"></i> 정책 대상자인 국민과 기업 현장의 목소리 경청</li>
+            <li><i class="fa-solid fa-check"></i> 부처 간 칸막이와 이기주의를 타파하는 One-Team 협업</li>
+            <li><i class="fa-solid fa-check"></i> 적극적 설명과 설득으로 갈등을 선제적 해결</li>
+          </ul>
+        </div>
+
+        <div class="talent-card highlight-border">
+          <div class="card-top-icon red-grad"><i class="fa-solid fa-hand-fist"></i></div>
+          <span class="card-seq text-red">ACTION 02 [결단의 헌신]</span>
+          <h3>헌신 · 열정</h3>
+          <p class="card-summary">“자유민주주의 헌법 가치를 수호하고 국익에 헌신하는 공무원”</p>
+          <ul class="talent-sub-points">
+            <li><i class="fa-solid fa-check"></i> 확고한 역사관·안보관 및 호국보훈 정신 내재화</li>
+            <li><i class="fa-solid fa-check"></i> 복지부동과 보신주의를 타파하는 당당한 결단력</li>
+            <li><i class="fa-solid fa-check"></i> 국가와 국민을 위한 열정적·적극적 사명감</li>
+          </ul>
+        </div>
+
+        <div class="talent-card">
+          <div class="card-top-icon amber-grad"><i class="fa-solid fa-bolt-lightning"></i></div>
+          <span class="card-seq">ACTION 03</span>
+          <h3>창의 · 혁신</h3>
+          <p class="card-summary">“기업 활력을 옥죄는 킬러규제를 과감히 혁파하는 공무원”</p>
+          <ul class="talent-sub-points">
+            <li><i class="fa-solid fa-check"></i> 시장경제 활성화를 가로막는 불필요한 관행·규제 철폐</li>
+            <li><i class="fa-solid fa-check"></i> AI·빅데이터 디지털플랫폼정부 선도적 구현</li>
+            <li><i class="fa-solid fa-check"></i> 선제적이고 창의적인 행정 솔루션 발굴</li>
+          </ul>
+        </div>
+
+        <div class="talent-card">
+          <div class="card-top-icon navy-grad"><i class="fa-solid fa-scale-balanced"></i></div>
+          <span class="card-seq">ACTION 04</span>
+          <h3>윤리 · 책임</h3>
+          <p class="card-summary">“공정과 상식을 지키고 무관용 청렴성으로 책임지는 공무원”</p>
+          <ul class="talent-sub-points">
+            <li><i class="fa-solid fa-check"></i> 특권과 반칙을 배격하는 법과 원칙에 입각한 행정</li>
+            <li><i class="fa-solid fa-check"></i> 이해충돌 및 부패에 대한 무관용 원칙 견지</li>
+            <li><i class="fa-solid fa-check"></i> 행정 결과에 대해 끝까지 책임지는 자세</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 주요 국정 업무 섹션 -->
+  <section id="duties" class="section section-duties bg-light">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-heading">KEY STATE AFFAIRS</span>
+        <h2 class="main-heading">국가인재원의 역점 추진 업무</h2>
+        <div class="title-underline"></div>
+        <p class="section-desc">
+          국정 비전인 **‘다시 도약하는 대한민국’**을 뒷받침하기 위해 공직사회의 일하는 방식을 근본적으로 바꿉니다.
+        </p>
+      </div>
+
+      <div class="duty-tabs">
+        <button class="duty-tab active" data-filter="all">전체 핵심업무</button>
+        <button class="duty-tab" data-filter="value">헌법·국가관 교육</button>
+        <button class="duty-tab" data-filter="deregulation">킬러규제 철폐·적극행정</button>
+        <button class="duty-tab" data-filter="digital">디지털플랫폼정부(AI)</button>
+        <button class="duty-tab" data-filter="global">글로벌 중추국가(GPS)</button>
+      </div>
+
+      <div class="duties-grid">
+        <!-- 1. 헌법가치 및 호국보훈 몰입교육 -->
+        <div class="duty-card" data-category="value">
+          <div class="duty-icon-circle bg-navy">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div class="duty-content">
+            <span class="duty-tag">헌법가치 확립</span>
+            <h3>자유민주주의 헌법정신 및 역사관 내재화</h3>
+            <p>
+              대한민국의 정체성과 헌법 정신을 체득하고, 국립묘지·호국 현장 방문을 정례화하여 국가를 위해 희생한 분들을 기억하는 애국 공직자를 양성합니다.
+            </p>
+            <ul class="duty-features">
+              <li><i class="fa-solid fa-angle-right"></i> 5급 신임관리자과정 헌법정신 집중 캠프</li>
+              <li><i class="fa-solid fa-angle-right"></i> 보훈·안보 유적지 답사 및 안보의식 고취</li>
+              <li><i class="fa-solid fa-angle-right"></i> 공정과 상식에 기반한 공직가치 워크숍</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2. 킬러규제 철폐 및 적극행정 -->
+        <div class="duty-card" data-category="deregulation">
+          <div class="duty-icon-circle bg-red">
+            <i class="fa-solid fa-hand-fist"></i>
+          </div>
+          <div class="duty-content">
+            <span class="duty-tag">결단의 규제개혁</span>
+            <h3>기업을 살리는 킬러규제 철폐 & 적극행정 면책</h3>
+            <p>
+              민간 투자를 가로막는 모래주머니 규제를 전면 타파하고, 공무원이 감사 부담 없이 과감하게 일할 수 있는 적극행정 면책 지원체계를 교육합니다.
+            </p>
+            <ul class="duty-features">
+              <li><i class="fa-solid fa-angle-right"></i> 고위공무원단·과장급 규제혁파 케이스 스터디</li>
+              <li><i class="fa-solid fa-angle-right"></i> 민간 기업인과의 합동 현장 규제개혁 토론회</li>
+              <li><i class="fa-solid fa-angle-right"></i> 보신주의 척결 및 성과 중심 보상체계 안내</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3. 디지털플랫폼정부 구현 -->
+        <div class="duty-card" data-category="digital">
+          <div class="duty-icon-circle bg-blue">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <div class="duty-content">
+            <span class="duty-tag">디지털플랫폼정부</span>
+            <h3>생성형 AI & 공공 데이터 기반 행정 실습</h3>
+            <p>
+              인공지능(AI)과 빅데이터를 능숙하게 활용하여 행정 절차를 획기적으로 간소화하고, 국민에게 선제적 맞춤형 서비스를 제공하는 스마트 공직자를 키웁니다.
+            </p>
+            <ul class="duty-features">
+              <li><i class="fa-solid fa-angle-right"></i> 생성형 AI 행정문서 기획 및 실무 코칭</li>
+              <li><i class="fa-solid fa-angle-right"></i> 데이터 과학 기반의 과학적 정책보고서 작성</li>
+              <li><i class="fa-solid fa-angle-right"></i> 상시학습 허브 ‘나라배움터’ AI 추천 고도화</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4. 글로벌 중추국가 위상 강화 -->
+        <div class="duty-card" data-category="global">
+          <div class="duty-icon-circle bg-teal">
+            <i class="fa-solid fa-earth-asia"></i>
+          </div>
+          <div class="duty-content">
+            <span class="duty-tag">글로벌 중추국가</span>
+            <h3>K-행정 수출 및 외국 고위공무원 전략연수</h3>
+            <p>
+              글로벌 중추국가(GPS) 비전에 따라 외국 차관·국장급 공무원들에게 한국의 전자정부 및 인사행정 노하우를 전수하고 외교적 네트워크를 선도합니다.
+            </p>
+            <ul class="duty-features">
+              <li><i class="fa-solid fa-angle-right"></i> 전략적 협력국 공무원 초청 맞춤형 연수</li>
+              <li><i class="fa-solid fa-angle-right"></i> OECD·세계은행 등 다자 HRD 협력 주도</li>
+              <li><i class="fa-solid fa-angle-right"></i> 국내 공직자의 글로벌 통상·외교 역량 훈련</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5. 5급 신임관리자 집중 합숙과정 -->
+        <div class="duty-card" data-category="value">
+          <div class="duty-icon-circle bg-purple">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="duty-content">
+            <span class="duty-tag">정예 관료 양성</span>
+            <h3>5급 신임관리자과정 (국가 백년대계의 주역)</h3>
+            <p>
+              충북 진천 본원의 최첨단 합숙 시설에서 5급 공채·경채 합격자들을 대상으로 치열한 토론과 실전 정책기획을 통해 당당한 중앙부처 사무관으로 담금질합니다.
+            </p>
+            <ul class="duty-features">
+              <li><i class="fa-solid fa-angle-right"></i> One-Team 결속을 위한 장기 집중 합숙훈련</li>
+              <li><i class="fa-solid fa-angle-right"></i> 강도 높은 모의 국무회의 및 브리핑 훈련</li>
+              <li><i class="fa-solid fa-angle-right"></i> 산업 현장 벤치마킹 및 사회공헌 실천</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 6. 인재상 기반 공공 HRD R&D -->
+        <div class="duty-card" data-category="deregulation">
+          <div class="duty-icon-circle bg-gold">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div class="duty-content">
+            <span class="duty-tag">HRD 표준 R&D</span>
+            <h3>공무원 인재상 평가도구 개발 및 전국 확산</h3>
+            <p>
+              새롭게 정립된 4대 공무원 인재상이 각 부처의 채용 면접, 승진심사, 역량평가에 즉시 활용될 수 있도록 표준 행동지표와 실전 모의과제를 연구·보급합니다.
+            </p>
+            <ul class="duty-features">
+              <li><i class="fa-solid fa-angle-right"></i> 인재상 기반 역량면접관 자격과정 운영</li>
+              <li><i class="fa-solid fa-angle-right"></i> 범정부 우수 규제혁신·적극행정 사례집 발간</li>
+              <li><i class="fa-solid fa-angle-right"></i> 전국 공공 교육훈련기관 HRD 콘테스트 주관</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 찾아오시는 길 상세 (진천 본원 & 과천 분원) -->
+  <section id="directions" class="section section-directions">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-heading">LOCATION & ACCESS</span>
+        <h2 class="main-heading">찾아오시는 길 상세 안내</h2>
+        <div class="title-underline"></div>
+        <p class="section-desc">
+          국가공무원인재개발원은 충북혁신도시의 **진천 본원**과 수도권의 **과천 분원** 2개 캠퍼스를 운영하고 있습니다.
+        </p>
+      </div>
+
+      <!-- 캠퍼스 탭 버튼 -->
+      <div class="campus-tabs-container">
+        <button class="campus-tab-btn active" data-target="jincheon">
+          <i class="fa-solid fa-building-flag"></i> 진천 본원 (충북캠퍼스)
+          <span class="badge-tag">대규모 정규과정/생활관</span>
+        </button>
+        <button class="campus-tab-btn" data-target="gwacheon">
+          <i class="fa-solid fa-landmark-dome"></i> 과천 분원 (경기캠퍼스)
+          <span class="badge-tag">수도권 단기/회의</span>
+        </button>
+      </div>
+
+      <!-- 진천 본원 패널 -->
+      <div id="jincheon-panel" class="campus-panel active">
+        <div class="campus-header-card">
+          <div class="campus-title-wrap">
+            <span class="flag-pill">충북혁신도시 본원</span>
+            <h3>국가공무원인재개발원 진천 본원</h3>
+            <p class="address-text">
+              <i class="fa-solid fa-location-dot"></i> (우편번호 27873) 충청북도 진천군 덕산읍 교학로 30
+            </p>
+          </div>
+          <div class="contact-chips">
+            <a href="tel:043-931-6000" class="chip"><i class="fa-solid fa-phone"></i> 주간 대표: 043-931-6000</a>
+            <a href="tel:043-931-6062" class="chip"><i class="fa-solid fa-moon"></i> 야간 당직실: 043-931-6062</a>
+          </div>
+        </div>
+
+        <div class="campus-body-grid">
+          <div class="map-interactive-box">
+            <div class="map-visual-header">
+              <div class="map-pin-title">
+                <i class="fa-solid fa-map-pin"></i> <strong>진천 본원 위치도</strong>
+              </div>
+              <span class="status-live"><span class="dot"></span> 충북혁신도시 중심부</span>
+            </div>
+
+            <div class="map-render-mock">
+              <div class="map-backdrop jincheon-bg">
+                <div class="pin-marker">
+                  <div class="pin-pulse"></div>
+                  <div class="pin-card">
+                    <i class="fa-solid fa-landmark"></i>
+                    <span>국가공무원인재개발원 (진천본원)</span>
+                  </div>
+                </div>
+                <div class="surround-landmark bus-stop">
+                  <i class="fa-solid fa-bus"></i> 충북혁신도시 터미널 (차량 5분)
+                </div>
+                <div class="surround-landmark park-area">
+                  <i class="fa-solid fa-tree"></i> 두레봉공원
+                </div>
+              </div>
+            </div>
+
+            <div class="map-app-buttons">
+              <a href="https://map.naver.com/v5/search/%EA%B5%AD%EA%B0%80%EA%B3%B5%EB%AC%B4%EC%9B%90%EC%9D%B8%EC%9E%AC%EA%B0%9C%EB%B0%9C%EC%9B%90%20%EC%A7%84%EC%B2%9C" target="_blank" rel="noopener noreferrer" class="btn-map naver">
+                <i class="fa-solid fa-route"></i> 네이버 지도 길찾기
+              </a>
+              <a href="https://map.kakao.com/?q=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84+%EC%A7%84%EC%B2%9C%EA%B5%B0+%EB%8D%95%EC%82%B0%EC%9D%8D+%EA%B5%90%ED%95%99%EB%A1%9C+30" target="_blank" rel="noopener noreferrer" class="btn-map kakao">
+                <i class="fa-solid fa-location-arrow"></i> 카카오맵 길찾기
+              </a>
+              <button class="btn-map copy-addr" onclick="copyToClipboard('충청북도 진천군 덕산읍 교학로 30', this)">
+                <i class="fa-regular fa-copy"></i> 주소 복사
+              </button>
+            </div>
+          </div>
+
+          <div class="transport-detail-box">
+            <h4 class="box-title"><i class="fa-solid fa-signs-post"></i> 진천 본원 오시는 방법</h4>
+
+            <div class="transport-card">
+              <div class="trans-icon"><i class="fa-solid fa-bus-simple"></i></div>
+              <div class="trans-info">
+                <h5>고속 / 시외버스 이용 시</h5>
+                <p><strong>‘충북혁신도시 버스터미널’</strong> 도착 후 이동</p>
+                <ul>
+                  <li><strong>서울권 출발:</strong> 서울남부터미널 또는 동서울터미널 ➔ 충북혁신도시 직행 (약 1시간 20분 소요)</li>
+                  <li><strong>터미널 도착 후:</strong> 택시 이용 시 약 5분 소요 (기본요금), 도보 시 약 20분 소요</li>
+                  <li><strong>진천종합터미널 이용 시:</strong> 혁신도시 방면 시내버스 탑승 ➔ 인재개발원 하차 (약 25분)</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="transport-card">
+              <div class="trans-icon"><i class="fa-solid fa-train"></i></div>
+              <div class="trans-info">
+                <h5>KTX / SRT 고속철도 이용 시</h5>
+                <p><strong>오송역(KTX)</strong> 또는 <strong>평택지제역(SRT)</strong> 연계</p>
+                <ul>
+                  <li><strong>오송역 하차:</strong> 택시 이용 시 약 40분 소요, 또는 청주/세종 ➔ 진천 연계 시외버스 이용</li>
+                  <li><strong>입교일 셔틀버스:</strong> 5급 신임관리자과정 등 주요 과정 입교·퇴교일에는 오송역 등 주요 거점에서 원내 전용 셔틀버스 운행</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="transport-card">
+              <div class="trans-icon"><i class="fa-solid fa-car"></i></div>
+              <div class="trans-info">
+                <h5>승용차(자가용) 이용 시</h5>
+                <p><strong>북진천IC(평택제천고속도로)</strong> 또는 <strong>진천IC(중부고속도로)</strong> 진출</p>
+                <ul>
+                  <li><strong>북진천IC:</strong> 진출 후 국도 21호선(혁신도시 방면) ➔ 약 10분 소요</li>
+                  <li><strong>진천IC:</strong> 진출 후 덕산·혁신도시 방면 ➔ 약 15분 소요</li>
+                  <li><strong class="text-primary"><i class="fa-solid fa-square-parking"></i> 주차 안내:</strong> 원내 대형 방문객 및 교육생 주차장 완비 (상시 무료 주차)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 과천 분원 패널 -->
+      <div id="gwacheon-panel" class="campus-panel">
+        <div class="campus-header-card">
+          <div class="campus-title-wrap">
+            <span class="flag-pill pill-green">수도권 경기캠퍼스</span>
+            <h3>국가공무원인재개발원 과천 분원</h3>
+            <p class="address-text">
+              <i class="fa-solid fa-location-dot"></i> (우편번호 13811) 경기도 과천시 교육원로 118 (중앙동)
+            </p>
+          </div>
+          <div class="contact-chips">
+            <a href="tel:02-503-8020" class="chip"><i class="fa-solid fa-phone"></i> 주간 대표: 02-503-8020</a>
+            <a href="tel:02-500-8620" class="chip"><i class="fa-solid fa-moon"></i> 야간 당직실: 02-500-8620</a>
+          </div>
+        </div>
+
+        <div class="campus-body-grid">
+          <div class="map-interactive-box">
+            <div class="map-visual-header">
+              <div class="map-pin-title">
+                <i class="fa-solid fa-map-pin"></i> <strong>과천 분원 위치도</strong>
+              </div>
+              <span class="status-live"><span class="dot green-dot"></span> 정부과천청사 인근</span>
+            </div>
+
+            <div class="map-render-mock">
+              <div class="map-backdrop gwacheon-bg">
+                <div class="pin-marker">
+                  <div class="pin-pulse green-pulse"></div>
+                  <div class="pin-card">
+                    <i class="fa-solid fa-landmark-dome"></i>
+                    <span>국가공무원인재개발원 (과천분원)</span>
+                  </div>
+                </div>
+                <div class="surround-landmark sub-stop">
+                  <i class="fa-solid fa-train-subway"></i> 정부과천청사역 (셔틀운행)
+                </div>
+                <div class="surround-landmark mt-area">
+                  <i class="fa-solid fa-mountain"></i> 관악산 등산로 연계
+                </div>
+              </div>
+            </div>
+
+            <div class="map-app-buttons">
+              <a href="https://map.naver.com/v5/search/%EA%B5%AD%EA%B0%80%EA%B3%B5%EB%AC%B4%EC%9B%90%EC%9D%B8%EC%9E%AC%EA%B0%9C%EB%B0%9C%EC%9B%90%20%EA%B3%BC%EC%B2%9C" target="_blank" rel="noopener noreferrer" class="btn-map naver">
+                <i class="fa-solid fa-route"></i> 네이버 지도 길찾기
+              </a>
+              <a href="https://map.kakao.com/?q=%EA%B2%BD%EA%B8%B0%EB%8F%84+%EA%B3%BC%EC%B2%9C%EC%8B%9C+%EA%B5%90%EC%9C%A1%EC%9B%90%EB%A1%9C+118" target="_blank" rel="noopener noreferrer" class="btn-map kakao">
+                <i class="fa-solid fa-location-arrow"></i> 카카오맵 길찾기
+              </a>
+              <button class="btn-map copy-addr" onclick="copyToClipboard('경기도 과천시 교육원로 118', this)">
+                <i class="fa-regular fa-copy"></i> 주소 복사
+              </button>
+            </div>
+          </div>
+
+          <div class="transport-detail-box">
+            <h4 class="box-title"><i class="fa-solid fa-signs-post"></i> 과천 분원 오시는 방법</h4>
+
+            <div class="transport-card">
+              <div class="trans-icon"><i class="fa-solid fa-train-subway"></i></div>
+              <div class="trans-info">
+                <h5>지하철 4호선 이용 시</h5>
+                <p><strong>수도권 전철 4호선 [정부과천청사역]</strong> 이용</p>
+                <ul>
+                  <li><strong>6번 출구:</strong> 도보 시 약 15~20분 소요 (완만한 오르막 산책로)</li>
+                  <li><strong>7번 출구:</strong> 택시 탑승 시 약 5분 소요 (기본요금)</li>
+                  <li><strong>청사 연계 셔틀:</strong> 평일 출근 및 입교 시간대 6번 출구 앞에서 인재원 순환 셔틀버스 정기 운행</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="transport-card">
+              <div class="trans-icon"><i class="fa-solid fa-bus-simple"></i></div>
+              <div class="trans-info">
+                <h5>시내 · 광역버스 이용 시</h5>
+                <p><strong>‘정부과천청사’</strong> 또는 <strong>‘KT과천지사’</strong> 정류장 하차</p>
+                <ul>
+                  <li><strong>간선/지선:</strong> 441, 502, 540 등 다수</li>
+                  <li><strong>광역/직행:</strong> 1550-3, 3030, 7007-1 등 청사 경유 노선 이용</li>
+                  <li>하차 후 교육원로(관악산 방면)를 따라 도보 이동 또는 셔틀 환승</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="transport-card">
+              <div class="trans-icon"><i class="fa-solid fa-car"></i></div>
+              <div class="trans-info">
+                <h5>승용차 이용 시 유의사항</h5>
+                <p><strong>과천대로 및 교육원로 진입</strong></p>
+                <ul>
+                  <li><strong class="text-danger"><i class="fa-solid fa-triangle-exclamation"></i> 주차 협소 안내:</strong> 과천 분원은 주차 공간이 매우 제한되어 있어 대중교통 및 전철역 셔틀버스를 적극 권장합니다. (차량 5부제 적용)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <i class="fa-solid fa-landmark"></i>
+          <div>
+            <span class="f-title">국가공무원인재개발원 (NHI)</span>
+            <small class="f-sub">다시 도약하는 대한민국, 함께 잘 사는 국민의 나라</small>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <a href="#vision">4대인재상</a>
+          <a href="#duties">핵심업무</a>
+          <a href="#directions">찾아오시는길</a>
+          <a href="https://www.mpm.go.kr" target="_blank">인사혁신처</a>
+          <a href="https://e-learning.nhi.go.kr" target="_blank">나라배움터</a>
+        </div>
+      </div>
+
+      <div class="footer-addresses">
+        <div class="addr-block">
+          <strong>[진천 본원]</strong> 충청북도 진천군 덕산읍 교학로 30 (우: 27873) | 대표: 043-931-6000 | 당직실: 043-931-6062
+        </div>
+        <div class="addr-block">
+          <strong>[과천 분원]</strong> 경기도 과천시 교육원로 118 (우: 13811) | 대표: 02-503-8020 | 당직실: 02-500-8620
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">Copyright &copy; National Human Resources Development Institute. All Rights Reserved. (인사혁신처 소속기관)</p>
+        <div class="totop-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+          <i class="fa-solid fa-arrow-up"></i> 맨 위로
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast">주소가 복사되었습니다.</div>
+  <script src="script.js"></script>
+</body>
+</html>
